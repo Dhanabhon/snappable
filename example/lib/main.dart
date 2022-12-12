@@ -35,11 +35,11 @@ class _MyAppState extends State<MyApp> {
                   width: double.infinity,
                   color: Colors.deepPurple,
                   alignment: Alignment.center,
-                  child: Text(
+                  child: const Text(
                     'This will be snapped',
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    style: TextStyle(
                       color: Colors.white,
-                    ),
+                    )
                   ),
                 ),
               ),
