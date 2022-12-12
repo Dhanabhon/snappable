@@ -58,9 +58,9 @@ class MyWidget extends StatelessWidget {
   }
 }
 ```
- Undo by tapping again.
- 
- ### Callback for when the snap ends
+Undo by tapping again.
+
+### Callback for when the snap ends
  ```dart
  
  class MyWidget extends StatelessWidget {
