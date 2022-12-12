@@ -9,8 +9,16 @@ Check out [blog post](https://fidev.io/thanos) describing the package on [Fidev]
 ![Example 2](https://user-images.githubusercontent.com/16286046/62490326-52626380-b7c9-11e9-9ed3-5545e3175cb6.gif)
 ![Example 3](https://user-images.githubusercontent.com/16286046/62490340-5bebcb80-b7c9-11e9-8bcf-e94c18f25f1b.gif)
 
-
 ## Getting Started
+
+### Install the Snappable package
+This will add a line like this to your package's pubspec.yaml (and run an implicit `flutter pub get`):
+```yaml
+dependencies:
+  snappable:
+    git: https://github.com/Dhanabhon/snappable.git
+```
+Alternatively, your editor might support `flutter pub get`. Check the docs for your editor to learn more.
 
 ### Import it
 ```dart
