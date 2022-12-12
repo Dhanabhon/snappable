@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
                   if (state!.isGone) {
                     state.reset();
                   } else {
-                    state!.snap();
+                    state.snap();
                   }
                 },
                 child: const Text('Snap / Reverse'),
