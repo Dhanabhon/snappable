@@ -1,5 +1,5 @@
 # snappable
-### This repository forked from https://github.com/MarcinusX/snappable
+### This repository forked from [link](https://github.com/MarcinusX/snappable) and [link](https://github.com/igorczapski/snappable)
 Thanos effect library in Flutter
 
 Check out [blog post](https://fidev.io/thanos) describing the package on [Fidev](https://fidev.io).

@@ -47,10 +47,12 @@ class _MyAppState extends State<MyApp> {
             ElevatedButton(
                 onPressed: () {
                   SnappableState? state = _snappableKey.currentState;
-                  if (state!.isGone) {
-                    state.reset();
-                  } else {
-                    state.snap();
+                  if(state != null) {
+                    if (state.isGone) {
+                      state.reset();
+                    } else {
+                      state.snap();
+                    }
                   }
                 },
                 child: const Text('Snap / Reverse'),
