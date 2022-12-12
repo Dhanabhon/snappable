@@ -1,5 +1,6 @@
-import 'dart:ui';
 import 'dart:math' as math;
+import 'dart:typed_data';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
@@ -60,7 +61,7 @@ class SnappableState extends State<Snappable> with SingleTickerProviderStateMixi
   final GlobalKey _globalKey = GlobalKey();
 
   /// Layers of image
-  late List<Uint8List>? _layers;
+  List<Uint8List>? _layers;
 
   /// Values from -1 to 1 to dislocate the layers a bit
   late List<double> _randoms;
@@ -84,6 +85,12 @@ class SnappableState extends State<Snappable> with SingleTickerProviderStateMixi
   }
 
   @override
+  void didUpdateWidget(covariant Snappable oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    _animationController.duration = widget.duration;
+  }
+
+  @override
   void dispose() {
     _animationController.dispose();
     super.dispose();
@@ -95,12 +102,10 @@ class SnappableState extends State<Snappable> with SingleTickerProviderStateMixi
       onTap: widget.snapOnTap ? () => isGone ? reset() : snap() : null,
       child: Stack(
         children: [
+          if(_layers != null) ..._layers!.map(_imageToWidget),
           AnimatedBuilder(
             animation: _animationController,
             builder: (context, child) {
-              if(_layers!.isNotEmpty) {
-                _layers!.map(_imageToWidget);
-              }
               if (_animationController.isDismissed) {
                 return child!;
               } else {
