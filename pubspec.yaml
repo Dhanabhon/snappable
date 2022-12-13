@@ -39,7 +39,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.dhanabhon.Snappable
+        package: com.dhanabhon.snappable
         pluginClass: SnappablePlugin
       ios:
         pluginClass: SnappablePlugin
